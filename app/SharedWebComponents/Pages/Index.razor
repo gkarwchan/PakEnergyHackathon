@@ -1,0 +1,43 @@
+﻿@page "/"
+
+<PageTitle>Home</PageTitle>
+
+<MudCard Elevation="24">
+    <MudCardHeader>
+        <CardHeaderAvatar>
+            <MudAvatar Color="Color.Info" Size="Size.Large">
+                <MudIcon Icon="@Icons.Custom.Brands.MicrosoftAzure" Size="Size.Large" />
+            </MudAvatar>
+        </CardHeaderAvatar>
+        <CardHeaderContent>
+            <MudText Typo="Typo.h5">
+                <MudLink Href="https://www.nuget.org/packages/Azure.AI.OpenAI" Color="Color.Secondary" 
+                         Target="_blank" aria-label="The official Azure.AI.OpenAI .NET NuGet link.">
+                  PakEnergy Exchange Tutorial
+                </MudLink>
+            </MudText>
+            <MudText Typo="Typo.h6">Interactive Tutorial</MudText>
+        </CardHeaderContent>
+    </MudCardHeader>
+    <MudCardContent>
+        <MudCarousel Class="mud-width-full"
+                     BulletsColor="Color.Primary" Style="height: 58vh;"
+                     AutoCycle="true" TData="Image" Context="image"
+                     ItemsSource=@_images AutoCycleTime=@TimeSpan.FromSeconds(3)>
+            <ItemTemplate>
+                <div class="d-flex flex-grow-1">
+                    <MudImage Fluid="true" Src=@image.Src Elevation="5" ObjectPosition="ObjectPosition.Center"
+                              Alt=@($"{image.Alt} (generated with Bing Create).") Class="rounded-lg mx-auto my-auto" />
+                </div>
+            </ItemTemplate>
+        </MudCarousel>
+        <div class="full-width pt-6 text-align-center">
+            <MudText Typo="Typo.caption">
+                PakEnergy Exchange screenshots
+            </MudText>
+        </div>
+    </MudCardContent>
+    <MudCardActions>
+        
+    </MudCardActions>
+</MudCard>
