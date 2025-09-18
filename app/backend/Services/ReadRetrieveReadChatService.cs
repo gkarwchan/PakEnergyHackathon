@@ -87,8 +87,8 @@ public class ReadRetrieveReadChatService
             var getQueryChat = new ChatHistory(@"You are a helpful AI assistant, generate search query for followup question.
 Make your respond simple and precise. Return the query only, do not return any other text.
 e.g.
-Northwind Health Plus AND standard plan.
-standard plan AND dental AND employee benefit.
+Rejected invoice and how to fix them.
+Why using Exchange is helpful.
 ");
 
             getQueryChat.AddUserMessage(question);
@@ -125,7 +125,7 @@ standard plan AND dental AND employee benefit.
         // step 3
         // put together related docs and conversation history to generate answer
         var answerChat = new ChatHistory(
-            "You are a system assistant who helps the company employees with their questions. Be brief in your answers");
+            "You are a system assistant who helps the company clients with their questions on Exchange product. Be brief in your answers");
 
         // add chat history
         foreach (var message in history)
@@ -208,9 +208,9 @@ You answer needs to be a json object with the following format.
 Return the follow-up question as a json string list. Don't put your answer between ```json and ```, return the json string directly.
 e.g.
 [
-    ""What is the deductible?"",
-    ""What is the co-pay?"",
-    ""What is the out-of-pocket maximum?""
+    ""What is the invoice?"",
+    ""What is the payment?"",
+    ""What is the rejected invoice?""
 ]");
 
             var followUpQuestions = await chat.GetChatMessageContentAsync(
