@@ -21,15 +21,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared", "shared\Shared\Shared.csproj", "{B54798B7-C176-4373-86D4-9D7376AD2E17}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClientApp.Tests", "tests\ClientApp.Tests\ClientApp.Tests.csproj", "{E74A1913-C9C9-4B58-8E0D-D42F8176D7A7}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrepareDocs", "prepdocs\PrepareDocs\PrepareDocs.csproj", "{9C39AF95-2BB1-48CF-BD12-D214C0BD6076}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmbedFunctions", "functions\EmbedFunctions\EmbedFunctions.csproj", "{54099AF3-CFA8-4EA9-9118-A26E3E63745B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedWebComponents", "SharedWebComponents\SharedWebComponents.csproj", "{5781A638-C6A8-46A3-8C2E-2B442E58C74F}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MinimalApi.Tests", "tests\MinimalApi.Tests\MinimalApi.Tests.csproj", "{C687997A-A569-47AA-A808-504F7DFCA97B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
